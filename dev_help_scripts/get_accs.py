@@ -4,7 +4,7 @@ import psycopg2
 
 sql = "SELECT * FROM deals"
 conn = psycopg2.connect(
-    "dbname=my_remote_db user=mt5_user password=123 host=172.22.18.235")
+    "dbname=my_remote_db user=mt5_user password=123 host=172.20.155.236")
 with conn:
     with conn.cursor(cursor_factory=DictCursor) as c:
         c.execute(sql)
