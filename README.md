@@ -21,7 +21,23 @@ flask --app demoapp run --debug
 
 This command should start the development server and the app will be ready to receive requests on the configured REST endpoints.
 
-Do not forget to **change the host on db.py** according to your environment.
+Do not forget **to change the host on __init__.py** according to your environment.
+
+Do not forget **to do a port redirection** from port 80 (where MQL5 WebRequest will connect) to port 5000 (where this app will be listening).
+
+There is a simple utility that can do this for you. Just run
+
+```
+sudo apt install redir
+```
+
+Then 
+
+``` 
+sudo redir :80 :5000
+```
+
+and you are ready to go.
 
 ## Development Help Scripts
 
